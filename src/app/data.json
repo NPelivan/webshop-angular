@@ -1,0 +1,97 @@
+[
+  {
+    "id": 1,
+    "name": "Tommy Jeans jacket",
+    "client": "Client 1",
+    "date": "21.05.2022.",
+    "price": 40
+  },
+
+  {
+    "id": 2,
+    "name": "Nike T-shirt",
+    "client": "Client 1",
+    "date": "21.05.2022.",
+    "price": 39
+  },
+
+  {
+    "id": 3,
+    "name": "GAP sweatshirt",
+    "client": "Client 1",
+    "date": "20.05.2022.",
+    "price": 45
+  },
+
+  {
+    "id": 4,
+    "name": "LTB jeans",
+    "client": "Client 1",
+    "date": "17.05.2022.",
+    "price": 55
+  },
+
+  {
+    "id": 5,
+    "name": "Addidas leggings",
+    "client": "Client 1",
+    "date": "14.04.2022.",
+    "price": 39
+  },
+
+  {
+    "id": 6,
+    "name": "Nike shorts",
+    "client": "Client 1",
+    "date": "19.04.2022.",
+    "price": 38
+  },
+
+  {
+    "id": 7,
+    "name": "Nike sneakers",
+    "client": "Client 1",
+    "date": "24.04.2022.",
+    "price": 20
+  },
+
+  {
+    "id": 8,
+    "name": "Patrizia Pepe coat",
+    "client": "Client 1",
+    "date": "25.03.2022.",
+    "price": 300
+  },
+
+  {
+    "id": 9,
+    "name": "Lacoste sneakers",
+    "client": "Client 1",
+    "date": "11.05.2022.",
+    "price": 53
+  },
+
+  {
+    "id": 10,
+    "name": "UGG boots",
+    "client": "Client 1",
+    "date": "01.04.2022.",
+    "price": 50
+  },
+
+  {
+    "id": 11,
+    "name": "Polo shirt",
+    "client": "Client 1",
+    "date": "08.05.2022.",
+    "price": 39
+  },
+
+  {
+    "id": 11,
+    "name": "Tommy Hilfiger dress",
+    "client": "Client 1",
+    "date": "14.03.2022.",
+    "price": 60
+  }
+]

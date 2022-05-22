@@ -1,0 +1,15 @@
+<ul>
+  <li (click)="onClickPage(activePage - 1)">
+    <a href="javascript:void(0);">&laquo; Previous</a>
+  </li>
+  <li
+    [ngClass]="{ active: activePage === item }"
+    *ngFor="let item of pages"
+    (click)="onClickPage(item)"
+  >
+    <a href="javascript:void(0);">{{ item }}</a>
+  </li>
+  <li (click)="onClickPage(activePage + 1)">
+    <a href="javascript:void(0);">Next &raquo;</a>
+  </li>
+</ul>

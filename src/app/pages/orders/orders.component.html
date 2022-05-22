@@ -1,8 +1,9 @@
 <h1>Orders</h1>
 
+<input type="search" aria-label="didd" [(ngModel)]="query" />
 <table>
   <tr>
-    <th>Number of order</th>
+    <th>No. of order</th>
     <th>Name of order</th>
     <th>Client</th>
     <th>Status</th>
@@ -10,48 +11,20 @@
     <th>Price</th>
   </tr>
 
-  <tr>
-    <td>1</td>
-    <td></td>
-    <td>Client 1</td>
+  <tr *ngFor="let order of orders | SearchPipe: query">
+    <td>{{ order.id }}</td>
+    <td>{{ order.name }}</td>
+    <td>{{ order.client }}</td>
     <td>Open</td>
-    <td></td>
-    <td></td>
-  </tr>
-
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>{{ order.date }}</td>
+    <td>{{ order.price }}</td>
   </tr>
 </table>
+
+<div>
+  <app-pagination
+    [totalRecords]="23"
+    [recordsPerPage]="5"
+    (onPageChange)="displayActivePage($event)"
+  ></app-pagination>
+</div>
