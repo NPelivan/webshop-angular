@@ -1,15 +1,25 @@
-<ul>
-  <li (click)="onClickPage(activePage - 1)">
-    <a href="javascript:void(0);">&laquo; Previous</a>
-  </li>
-  <li
-    [ngClass]="{ active: activePage === item }"
-    *ngFor="let item of pages"
-    (click)="onClickPage(item)"
+<div class="pagination">
+  <button [disabled]="value.page === 1" (click)="selectPage(1)"><<</button>
+  <button [disabled]="value.page === 1" (click)="selectPage(value.page - 1)">
+    <
+  </button>
+  <button *ngFor="let page of visiblePages" (click)="selectPage(page)">
+    {{ page }}
+  </button>
+  <button
+    [disabled]="value.page === totalPages"
+    (click)="selectPage(value.page + 1)"
   >
-    <a href="javascript:void(0);">{{ item }}</a>
-  </li>
-  <li (click)="onClickPage(activePage + 1)">
-    <a href="javascript:void(0);">Next &raquo;</a>
-  </li>
-</ul>
+    >
+  </button>
+  <button
+    [disabled]="value.page === totalPages"
+    (click)="selectPage(totalPages)"
+  >
+    >>
+  </button>
+</div>
+
+<select [ngModel]="value.pageSize" (ngModelChange)="selectPageSize($event)">
+  <option *ngFor="let size of pageSizes" [value]="size">{{ size }}</option>
+</select>

@@ -8,17 +8,19 @@ import { ValidateComponent } from './components/validate/validate.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { OrdersComponent } from './pages/orders/orders.component';
 import { SearchPipe } from './components/search/search.pipe';
-import { PaginationModule } from './components/pagination/pagination.module';
+import { PaginationComponent } from './components/pagination/pagination.component';
+import { SortDirective } from './directive/sort.directive';
 
 @NgModule({
-  declarations: [AppComponent, ValidateComponent, OrdersComponent, SearchPipe],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    ReactiveFormsModule,
-    FormsModule,
-    PaginationModule,
+  declarations: [
+    AppComponent,
+    ValidateComponent,
+    OrdersComponent,
+    SearchPipe,
+    PaginationComponent,
+    SortDirective,
   ],
+  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
