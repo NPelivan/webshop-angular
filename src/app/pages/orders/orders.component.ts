@@ -59,5 +59,10 @@ export class OrdersComponent implements OnInit {
     this.activePage = activePageNumber;
   }
 
+  deleteRow(order) {
+    const index = this.orders.indexOf(order);
+    this.orders.splice(index, 1);
+  }
+
   orders: Order[] = data;
 }

@@ -10,6 +10,7 @@ import { OrdersComponent } from './pages/orders/orders.component';
 import { SearchPipe } from './components/search/search.pipe';
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { SortDirective } from './directive/sort.directive';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,13 @@ import { SortDirective } from './directive/sort.directive';
     PaginationComponent,
     SortDirective,
   ],
-  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+    CommonModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

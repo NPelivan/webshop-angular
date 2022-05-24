@@ -4,12 +4,16 @@
 <div>
   <table>
     <tr>
-      <th>No. of order</th>
-      <th>Name of order</th>
-      <th>Client</th>
-      <th>Status</th>
-      <th>Date</th>
-      <th>Price</th>
+      <th [appSort]="orders" data-order="desc" data-name="id">No. of order</th>
+      <th [appSort]="orders" data-order="desc" data-name="name">
+        Name of order
+      </th>
+      <th [appSort]="orders" data-order="desc" data-name="client" data-order>
+        Client
+      </th>
+      <th [appSort]="orders" data-order="desc" data-name="status">Status</th>
+      <th [appSort]="orders" data-order="desc" data-name="date">Date</th>
+      <th [appSort]="orders" data-order="desc" data-name="price">Price</th>
     </tr>
 
     <tr *ngFor="let order of orders | SearchPipe: query">
@@ -19,6 +23,7 @@
       <td>Open</td>
       <td>{{ order.date }}</td>
       <td>{{ order.price }}</td>
+      <button (click)="deleteRow(order)">Delete</button>
     </tr>
   </table>
 

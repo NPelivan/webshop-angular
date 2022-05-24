@@ -21,10 +21,15 @@
       placeholder="Password"
       formControlName="password"
       [ngClass]="{ 'is-invalid': submitted && f.password.errors }"
+      pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
     />
     <div *ngIf="submitted && f.password.errors">
       <div *ngIf="submitted && f.password.errors.required">
         Password is required
+      </div>
+      <div *ngIf="submitted && f.password.errors.pattern">
+        Must contain one number and one uppercase and lowercase letter, and at
+        least 6 or more characters.
       </div>
     </div>
   </div>
